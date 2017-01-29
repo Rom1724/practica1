@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<!--link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css"-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+	<script type="text/javascript">
+		$(document).ready (function (){
+			//alert("Jquiery funcionando...");
+			$("#btnsumar").click(function (){
+					//alert("Boton funcionando..");
+				var	n1=parseInt($("#num1").val());
+				var	n2=parseInt($("#num2").val());
+				var sum=n1+n2;
+				$("#resultado").val(sum);
+				alert("la suma es: "+sum);
+			});
+		});
+	</script>
+	<style type="text/css">
+		p{
+			text-align: center;
+		}
+		#Contacto{
+			background-color: yellow;
+		}
+		#Principal{
+			background-color: blue;
+		}
+		.colorAmarillo{
+			color: red;
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div data-role="page" id="Principal" data-theme="a">
+		<div data-role="header">
+			<a href="https://www.google.com.mx" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+			<p class="colorAmarillo">Pruebla de estilo</a>
+			<p>Principal</p>
+			<a href="#Contacto" class="ui-btn ui-icon-search ui-btn-icon-right">Buscar</a>
+		</div>
+		
+		<div data-role="content">
+			<a href="#Contacto" data-role="button" data-transition="slide">slide</a>
+			<a href="#Contacto" data-role="button" data-transition="slideup">slideup</a>
+			<a href="#Contacto" data-role="button" data-transition="slidedown">slidedown</a>
+			<a href="#Contacto" data-role="button" data-transition="flip">flip</a>
+			<a href="#Contacto" data-role="button" data-transition="fade">fade</a>
+			<a href="#Contacto" data-role="button" data-transition="pop">pop</a>
+			<a href="#Contacto" data-role="button" data-transition="flow">flow</a>
+			<a href="#Contacto" data-role="button" data-transition="slidelade">slidelade</a>
+			<a href="#Contacto" data-role="button" data-transition="turn">turn</a>
+			<a href="#Suma" data-role="button" data-transition="flow">SUMA</a>
+			
+			
+			
+		</div>
+		<div data-role="footer">
+		<p>
+			<a href="http://facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-top" >Facebook</a>
+			<a href="http://twitter.com" class="ui-btn ui-icon-plus ui-btn-icon-top" >Twitter</a>
+			<a href="http://instagram.com" class="ui-btn ui-icon-plus ui-btn-icon-top" >Instagram</a>
+			</p>
+			<p>pie de aplicación</p>
+		</div>
+	</div>	
+
+	<div data-role="page" id="Contacto">
+		<div data-role="header">
+
+		<a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+			<p>Contacto</p>
+		</div>	
+
+
+		<div data-role="content">
+			<p>Romario Lopez Martinez</p>
+			<p>romalopez1724@gmail.com</p>
+
+		</div>
+		<div data-role="footer">
+			<p>pie de aplicación</p>
+		</div>
+	</div>	
+
+<!--div data-role="header">
+			<p>Sumar dos numeros</p>
+		</div-->	
+	<div data-role="page" id="Suma"> 
+
+		<div data-role="header">
+			<div data-role="navbar">
+				<ul>
+					<li><a class="ui-btn ui-icon-home ui-btn-icon-left" href="#Principal"></a>Home</li>
+					<li><a class="ui-btn ui-icon-search ui-btn-icon-left" href="#Contacto"></a>Contacto</li>
+					<li><a class="ui-btn ui-icon-plus ui-btn-icon-left" href="#https://www.google.com.mx"></a>Google</li>
+				</ul>
+			</div>
+			
+		</div>	
+		<div data-role="content">
+			<input type="text" id="num1" placeholder="Escrriba un numero">
+			<input type="text" id="num2" placeholder="Escrriba un segundo numero">
+			<input type="text" id="resultado" placeholder="Resultado">
+			<input type="button" id="btnsumar" value="calcular suma">
+			<p>Romario Lopez Martinez</p>
+			<p>romalopez1724@gmail.com</p>
+
+		</div>
+		<div data-role="footer">
+			<p>pie de aplicación</p>
+		</div>
+	</div>	
+
+
+</body>
+</html>
